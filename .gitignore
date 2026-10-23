@@ -1,0 +1,8 @@
+## Ignore Visual Studio build output & user settings
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.userosscache
