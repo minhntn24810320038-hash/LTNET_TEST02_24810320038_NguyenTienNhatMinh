@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using hoccsharp.Forms;
+using hoccsharp.Models;
 
 namespace hoccsharp
 {
@@ -9,10 +10,12 @@ namespace hoccsharp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            ApplicationConfiguration.Initialize();
 
-            // Mở giao diện chính (Hub chuyển bài tập)
+            // 1. Tự động khởi tạo CSDL SQLite (Tạo bảng Users, Courses, Students nếu chưa có)
+            DatabaseHelper.InitDatabase();
+
+            // 2. Chạy Form chính MDI
             Application.Run(new frmSchoolMain());
         }
     }

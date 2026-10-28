@@ -29,7 +29,8 @@ namespace hoccsharp.Forms
 
             menuExercises.DropDownItems.Add(new ToolStripMenuItem("Bài 1: Quản lý Đặt phòng Khách sạn", null, (s, e) => OpenChildForm<frmBookingManager>()));
             menuExercises.DropDownItems.Add(new ToolStripMenuItem("Bài 2: Quản lý Hồ sơ Nhân sự (CSV)", null, (s, e) => OpenChildForm<frmEmployeeManager>()));
-
+            menuExercises.DropDownItems.Add(new ToolStripMenuItem("Bài 5.1: Form Đăng nhập (SQLite)", null, (s, e) => OpenChildForm<frmLogin>()));
+            menuExercises.DropDownItems.Add(new ToolStripMenuItem("Bài 5.2: Form Đăng ký Học viên (SQLite)", null, (s, e) => OpenChildForm<frmRegister>()));
             // Bài 3: Form con Sinh viên & Môn học
             ToolStripMenuItem menuBai3 = new ToolStripMenuItem("Bài 3: Quản lý Trường học (MDI)");
             menuBai3.DropDownItems.Add(new ToolStripMenuItem("Danh sách Sinh viên", null, (s, e) => OpenChildForm<frmStudentList>()));
